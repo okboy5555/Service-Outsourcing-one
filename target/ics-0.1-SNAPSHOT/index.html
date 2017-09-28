@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>用户</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+    <link rel="stylesheet" href="./css/unicorn.main.css" />
+    <link rel="stylesheet" href="./css/unicorn.grey.css" class="skin-color" />
+    <style>
+        .feedback{
+            font-size:15px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header" class="header linear-g">
+            <a href="#panel-left" data-iconpos="notext" class="glyphicon glyphicon-th-large col-xs-2 text-right"> </a>
+            <a class="text-center col-xs-8">客服</a>
+        </div>
+        <div data-role="panel" data-position="left" data-display="push" class="list-group shortcut_menu dn linear-g" id="panel-left">
+            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-home"> </span> &nbsp;菜单1</a>
+            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-edit"> </span> &nbsp;菜单2</a>
+            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-list"> </span> &nbsp;菜单3</a>
+            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-list-alt"> </span> &nbsp;菜单4</a>
+        </div>
+  
+        <div data-role="content" class="container" role="main">
+            <div class="box2">
+                <div class="widget-box widget-chat">
+                            <div class="widget-title">
+                                <h5>Support chat</h5>
+                            </div>
+                            <div class="widget-content nopadding">
+                                <div class="chat-content panel-left">                   
+                                   <div class="chat-messages" id="chat-messages">
+                                        <div id="chat-messages-inner"></div>
+                                   </div>                                   
+                                   <div class="chat-message well">
+                                        <button class="btn btn-success" id="btn_send">Send</button>
+                                        <span class="input-box">
+                                            <input type="text" name="msg-box" id="msg-box"/>
+                                        </span>                                                       
+                                   </div>                   
+                                </div>
+                                <div class="chat-users panel-right">
+                                    
+                                    <div class="panel-content nopadding">
+                                        <ul class="contact-list">
+                                            <a href="" class="feedback" id="feedback">意见反馈</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+    </div>
+    </div>
+
+       <!-- 广告开始 -->
+    <div id="LBbox" class="carousel slide" data-ride="carousel">
+        <!-- 圆点按钮 -->
+        <ol class="carousel-indicators">
+          <li data-target="#LBbox" data-slide-to="0" class="active"></li>
+          <li data-target="#LBbox" data-slide-to="1"></li>
+        </ol>
+        <!-- 轮播内容 -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="http://img.mukewang.com/5412ad7c0001d2eb10880541.jpg" alt="1 slide">
+            <div class="carousel-caption">
+              <h1>第四代 Intel Core 处理器</h1>
+              <p>无论是什么任务，配备 Intel HD Graphics 5000 图形处理器的第四代 Intel Core 处理器都能应对自如。</p>
+              <!-- <p>
+                <a href="#" class="btn btn-lg btn-primary" role="button">点我下载</a>
+              </p> -->
+            </div>
+          </div>
+          <div class="item">
+            <img src="http://img.mukewang.com/5412ae5c0001653b12800644.jpg" alt="2 slide">
+            <div class="carousel-caption">
+              <h1>MacBook Air</h1>
+              <p>有了新一代 802.11ac 技术，MacBook Air 令 Wi-Fi 速度超越极限。</p>
+              <!-- <p>
+                <a href="#" class="btn btn-lg btn-primary" role="button">点我下载</a>
+              </p> -->
+            </div>
+          </div>
+        </div>
+        <!-- 左按钮 -->
+        <a href="#LBbox" class="left carousel-control" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">上一页</span>
+        </a>
+        <!-- 右按钮 -->
+        <a href="#LBbox" class="right carousel-control" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">下一页</span>
+        </a>
+    </div>
+    <!-- 广告结束 -->
+
+
+    <script src="./js/jquery-chat.min.js"></script>
+    <script src="./js/jquery.ui.custom.js"></script>
+    <script type="text/javascript" src="./js/jquery.mobile-1.4.0-rc.1.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/unicorn.js"></script>
+    <script src="./js/unicorn.chat_yonghu.js"></script>
+</body>
+
+</html>

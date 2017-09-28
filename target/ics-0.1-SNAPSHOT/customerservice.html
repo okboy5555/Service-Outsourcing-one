@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>客服后台</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+    <link rel="stylesheet" href="./css/unicorn.main.css" />
+    <link rel="stylesheet" href="./css/unicorn.grey.css" class="skin-color" />
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header" class="header linear-g">
+            <a href="#panel-left" data-iconpos="notext" class="glyphicon glyphicon-th-large col-xs-2 text-right"> </a>
+            <a class="text-center col-xs-8">客服后台</a>
+        </div>
+        <div data-role="panel" data-position="left" data-display="push" class="list-group shortcut_menu dn linear-g" id="panel-left">
+            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-home"> </span> &nbsp;菜单1</a>
+            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-edit"> </span> &nbsp;菜单2</a>
+            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-list"> </span> &nbsp;菜单3</a>
+            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-list-alt"> </span> &nbsp;菜单4</a>
+        </div>
+        <div data-role="content" class="container" role="main">
+            <div class="box2">
+                <div class="widget-box widget-chat">
+                    <div class="widget-title">
+
+                        <h5>客服回话</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <div class="chat-content panel-left">
+                            <div class="chat-messages" id="chat-messages">
+                                <div id="chat-messages-inner"></div>
+                            </div>
+                            <div class="chat-message well">
+                                <button class="btn btn-success">Send</button>
+                                <span class="input-box">
+                                            <input type="text" name="msg-box" id="msg-box" />
+                                        </span>
+                            </div>
+                        </div>
+                        <div class="chat-users panel-right">
+                            <div class="panel-title">
+                                <h5>接入用户</h5>
+                                <img class="add" src="./images/jia.png" alt="" id="add">
+                            </div>
+                            <div class="panel-content nopadding">
+                                <ul class="contact-list">
+                                    用户列表
+                                    <!--<li id="user-michelle" class="online new">-->
+                                        <!--<a href="#"> <span>Michelle</span></a><span class="msg-count badge badge-info">3</span>-->
+                                    <!--</li>-->
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/jquery-chat.min.js"></script>
+    <script src="./js/jquery.ui.custom.js"></script>
+    <script type="text/javascript" src="./js/jquery.mobile-1.4.0-rc.1.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/unicorn.js"></script>
+    <script src="./js/unicorn.chat.js"></script>
+
+</body>
+
+</html>

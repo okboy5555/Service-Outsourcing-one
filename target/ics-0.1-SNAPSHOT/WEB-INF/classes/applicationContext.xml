@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- data connection -->
+    <bean id="dataSourceOp" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="org.mariadb.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mariadb://localhost:3308/project"></property>
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
+    </bean>
+
+    <!-- session factory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSourceOp"></property>
+        <property name="hibernateProperties">
+            <props>
+                <!--Hibernate 配置选项-->
+                <prop key="hibernate.dialect">org.hibernate.dialect.MariaDB53Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+        </property>
+        <property name="mappingLocations">
+            <list>
+                <value>classpath:configurationXml/hibernateXml/SystemSettingItem.hbm.xml</value>
+                <value>classpath:configurationXml/hibernateXml/Admin.hbm.xml</value>
+                <value>classpath:configurationXml/hibernateXml/Customer.hbm.xml</value>
+                <value>classpath:configurationXml/hibernateXml/CustomerService.hbm.xml</value>
+                <value>classpath:configurationXml/hibernateXml/CustomerServiceType.hbm.xml</value>
+                <value>classpath:configurationXml/hibernateXml/Feedback.hbm.xml</value>
+                <value>classpath:configurationXml/hibernateXml/KnowledgeItem.hbm.xml</value>
+
+            </list>
+        </property>
+    </bean>
+
+    <bean id="AdminDaoUtil" class="cn.czu.t1.dao.AdminDaoUtil">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="CustomerDaoUtil" class="cn.czu.t1.dao.CustomerDaoUtil">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="SystemSettingDaoUtil" class="cn.czu.t1.dao.SystemSettingDaoUtil">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="CustomerServiceDaoUtil" class="cn.czu.t1.dao.CustomerServiceDaoUtil">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="KnowledgeDaoUtil" class="cn.czu.t1.dao.KnowledgeDaoUtil">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="SpringContextUtil" class="cn.czu.t1.Util.SpringContextUtil"></bean>
+    <bean id="Constant" class="cn.czu.t1.controler.Constant"></bean>
+    <bean id="QueueController" class="cn.czu.t1.controler.QueueController"></bean>
+</beans>

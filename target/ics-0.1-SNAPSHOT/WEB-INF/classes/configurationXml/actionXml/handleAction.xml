@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="handle" extends="struts-default" namespace="/handle">
+        <action name="login" class="cn.czu.t1.action.Login">
+            <result name="error">/login.jsp</result>
+        </action>
+        <action name="getServiceURL" class="cn.czu.t1.action.GetServiceURL"></action>
+        <action name="query" class="cn.czu.t1.action.Query"></action>
+        <action name="register" class="cn.czu.t1.action.Register"></action>
+        <action name="addFeedback" class="cn.czu.t1.action.FeedbackOperation"></action>
+    </package>
+
+    <package name="handle_admin" extends="struts-default" namespace="/handle/admin">
+        <action name="addCustomer" class="cn.czu.t1.action.admin.AddCustomer"></action>
+        <action name="addAdmin" class="cn.czu.t1.action.admin.AddAdmin"></action>
+        <action name="addSystemSetting" class="cn.czu.t1.action.admin.AddSystemSetting"></action>
+        <action name="connectCustomer" class="cn.czu.t1.action.admin.ConnectCustomer"></action>
+        <action name="checkLogin" class="cn.czu.t1.action.admin.CheckLogin"></action>
+        <action name="customerServiceOperation_*" class="cn.czu.t1.action.admin.CustomerServiceOperation" method="{1}"></action>
+        <action name="feedbackOperation_*" class="cn.czu.t1.action.FeedbackOperation" method="{1}"></action>
+    </package>
+</struts>

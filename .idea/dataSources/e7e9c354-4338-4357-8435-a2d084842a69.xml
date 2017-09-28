@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="project@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
+    <root id="1"/>
+    <schema id="2" parent="1" name="project">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="test"/>
+    <table id="7" parent="2" name="admininfo"/>
+    <table id="8" parent="2" name="customerinfo"/>
+    <table id="9" parent="2" name="customerserviceinfo"/>
+    <table id="10" parent="2" name="customerservicetypeinfo"/>
+    <table id="11" parent="2" name="feedbacks"/>
+    <table id="12" parent="2" name="feedbacktypeinfo"/>
+    <table id="13" parent="2" name="knowledge"/>
+    <table id="14" parent="2" name="systemsettings"/>
+    <column id="15" parent="7" name="id">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="7" name="username">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="17" parent="7" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="18" parent="7" name="name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="19" parent="7" name="level">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <index id="20" parent="7" name="UK_aomxp21dvri6gv8lpgfmcrpxl">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="21" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="22" parent="7" name="UK_aomxp21dvri6gv8lpgfmcrpxl">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>UK_aomxp21dvri6gv8lpgfmcrpxl</UnderlyingIndexName>
+    </key>
+    <column id="23" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="8" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="25" parent="8" name="level">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="26" parent="8" name="nickname">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="27" parent="8" name="password">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="28" parent="8" name="username">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="29" parent="8" name="job">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="30" parent="8" name="mail">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="31" parent="8" name="phone">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <index id="32" parent="8" name="UK_104ledrqhl45d8h1lmuks3wd8">
+      <ColNames>mail</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="33" parent="8" name="UK_dxq8c028aiqaf3riom8sxun6v">
+      <ColNames>phone</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="34" parent="8" name="UK_f66ae8e7wb0auv4ocqjsacjiq">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="35" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="36" parent="8" name="UK_f66ae8e7wb0auv4ocqjsacjiq">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>UK_f66ae8e7wb0auv4ocqjsacjiq</UnderlyingIndexName>
+    </key>
+    <key id="37" parent="8" name="UK_104ledrqhl45d8h1lmuks3wd8">
+      <ColNames>mail</ColNames>
+      <UnderlyingIndexName>UK_104ledrqhl45d8h1lmuks3wd8</UnderlyingIndexName>
+    </key>
+    <key id="38" parent="8" name="UK_dxq8c028aiqaf3riom8sxun6v">
+      <ColNames>phone</ColNames>
+      <UnderlyingIndexName>UK_dxq8c028aiqaf3riom8sxun6v</UnderlyingIndexName>
+    </key>
+    <column id="39" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="9" name="number">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="41" parent="9" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="42" parent="9" name="name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="43" parent="9" name="level">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="44" parent="9" name="workStatus">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="45" parent="9" name="accountStatus">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="46" parent="9" name="typeId">
+      <Position>8</Position>
+      <DataType>varchar(32)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <index id="47" parent="9" name="UK_2clftdqd5xdhidrlpraywvefl">
+      <ColNames>number</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="48" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="49" parent="9" name="UK_2clftdqd5xdhidrlpraywvefl">
+      <ColNames>number</ColNames>
+      <UnderlyingIndexName>UK_2clftdqd5xdhidrlpraywvefl</UnderlyingIndexName>
+    </key>
+    <column id="50" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="10" name="typeName">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <index id="52" parent="10" name="UK_lbgvrabt70fm0dyvti992n6qu">
+      <ColNames>typeName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="54" parent="10" name="UK_lbgvrabt70fm0dyvti992n6qu">
+      <ColNames>typeName</ColNames>
+      <UnderlyingIndexName>UK_lbgvrabt70fm0dyvti992n6qu</UnderlyingIndexName>
+    </key>
+    <column id="55" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="11" name="userId">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="57" parent="11" name="typeId">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="58" parent="11" name="content">
+      <Position>4</Position>
+      <DataType>longtext|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="59" parent="11" name="subject">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="60" parent="11" name="picMd5">
+      <Position>6</Position>
+      <DataType>longtext|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <key id="61" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="62" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="12" name="typeName">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <index id="64" parent="12" name="UK_l751ehccpndptxxua9jm8i02g">
+      <ColNames>typeName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="65" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="66" parent="12" name="UK_l751ehccpndptxxua9jm8i02g">
+      <ColNames>typeName</ColNames>
+      <UnderlyingIndexName>UK_l751ehccpndptxxua9jm8i02g</UnderlyingIndexName>
+    </key>
+    <column id="67" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="13" name="keyword">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="69" parent="13" name="subject">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="70" parent="13" name="content">
+      <Position>4</Position>
+      <DataType>longtext|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <index id="71" parent="13" name="keyword_idx">
+      <ColNames>keyword</ColNames>
+    </index>
+    <key id="72" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="73" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="74" parent="14" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="75" parent="14" name="value">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <index id="76" parent="14" name="UK_c0ibyk98s7919vvdsxh8ymhis">
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="77" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="78" parent="14" name="UK_c0ibyk98s7919vvdsxh8ymhis">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>UK_c0ibyk98s7919vvdsxh8ymhis</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

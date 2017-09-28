@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Feedback</title>
+	<link rel="stylesheet" type="text/css" href="./css/Feedback.css">
+</head>
+<body>
+	<div id="pjax-container">
+		<div class="others clearfix">
+			<div class="headtitle">
+				意见反馈
+			</div>
+			<div class="typeselect">
+				<span><input name="feedback" class="mr10" type="radio" checked="checked" value="1">内容意见</span>
+				<span><input name="feedback" class="mr10" type="radio" checked="checked" value="2">产品建议</span>
+				<span><input name="feedback" class="mr10" type="radio" checked="checked" value="3">技术问题</span>
+				<span><input name="feedback" class="mr10" type="radio" checked="checked" value="0">其他</span>
+			</div>
+			
+			<div class="field-wrap">
+				<div>
+					<textarea name="info" id="info" cols="30" rows="10" placeholder="请填写具体内容帮助我们了解您的意见与建议"></textarea>
+				</div>
+				<div>
+					<input type="text" name="contact" id="contact" class="phd error-field" placeholder="请留下真实的联系方式(邮箱、QQ)，方便我们答疑解惑">
+				</div>
+				<div class="btn-wrap">
+					<button hidefocus="true" id="submit" class=f1>提交</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

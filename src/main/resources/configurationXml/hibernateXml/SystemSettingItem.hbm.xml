@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!-- 对应类中间的属性，以及对应的数据库中间的表 -->
+    <class name="cn.czu.t1.module.SystemSettingItem" table="SystemSettings">
+        <!-- 主键，自动生成，使用32位16进制UUID -->
+        <id name="id" column="id" length="32">
+            <generator class="uuid.hex"></generator>
+        </id>
+        <!-- 类中间需要映射到数据库中的属性 -->
+        <property name="name" column="name" unique="true"></property>
+        <property name="value" column="value"></property>
+    </class>
+</hibernate-mapping>
